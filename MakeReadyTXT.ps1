@@ -1,7 +1,11 @@
 #Get-ChildItem -Path D:\IIS -Filter test.txt -Recurse | % {$_.fullname} | Measure-Object
 #cat .\test.txt | % {if (-Not (Test-Path($_))) { New-Item $_ -type file }}
+param(
+    [string]$env
+)
 
-$env = "test"
+
+#$env = "test"
 $fileName = "test.txt"
 $counter = 0
 $readyFiles = @( 
